@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./styles/index.css" />
+        <title>Caméra</title>
+    </head>
+
+    <body>
+        <nav class="navbar">
+            <div class="nav-title">Caméra</div>
+            <ul >
+                <li><a href="./">Accueil</a></li>
+                <li><a href="./liste-visages.html">Liste visages</a></li>
+            </ul>
+        </nav>
+
+        <section class="page-container">
+            <div class="video-section">
+                <h1 class="camera-name">Caméra A7</h1>
+                <div class="video-card">
+                    <div id="videoLoader" class="video-loader"></div>
+                    <img id="video" class="video" style="display: none" />
+                    <button id="cinemaBtn" class="movie-btn">⛶</button>
+                </div>
+                <div id="buttons-container">
+                    <button id="buttonAjouterVisage" class="main-btn">Ajouter un visage</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="face-stats">
+            <div class="stat-card glass">
+                <h3>Nombre de visages</h3>
+                <p id="pNbrVisages" class="stat-number">0</p>
+            </div>
+
+            <div class="stat-card glass">
+                <h3>Visages reconnus</h3>
+                <p id="divListeVisages" class="stat-visage">Aucun</p>
+            </div>
+        </section>
+        <section class="camera-controls">
+            <div class="joystick glass">
+                <button class="arrow up" data-direction="haut">▲</button>
+                <div class="mid-row">
+                    <button class="arrow left" data-direction="gauche">◀</button>
+                    <button class="arrow right" data-direction="droite">▶</button>
+                </div>
+                <button class="arrow down" data-direction="bas">▼</button>
+            </div>
+        </section>
+    <footer>
+        <div>
+            <p>
+                Projet réalisé par
+                <a href="https://www.linkedin.com/in/dorian-bacquet-924394348/">Dorian B.</a>
+                et
+                <a href="https://www.linkedin.com/in/eloi-bontron/">Eloi B.</a>
+            </p>
+        </div>
+
+        <div id="divPages">
+            <a href="./mentions-legales.html">Mentions légales</a>
+            <a href="./sitemap.xml">Plan du site</a>
+        </div>
+
+        <div id="divDepotGithub">
+            <p>Dépôt GitHub :</p>
+            <a href="https://github.com/RandomElo/Camera">Lien</a>
+        </div>
+    </footer>
+        <div id="resultModal" class="modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); justify-content: center; align-items: center">
+            <div style="background: white; padding: 20px; border-radius: 12px; position: relative; width: 300px">
+                <span id="closeModal" style="position: absolute; top: 10px; right: 10px; cursor: pointer">✕</span>
+                <h2 id="modalTitle">Titre</h2>
+                <p id="modalText">Texte</p>
+                <input id="modalInput" style="display: none; width: 100%; padding: 6px; margin-top: 10px" />
+                <div style="text-align: center;">
+                    <button id="modalBtn" class="main-btn" style="display: none; margin-top: 10px">Valider</button>
+                </div>
+            </div>
+        </div>
+        <script src="./scripts/camera.js"></script>
+    </body>
+</html>

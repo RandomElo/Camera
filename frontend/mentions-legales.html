@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mentions légales</title>
+    <link rel="stylesheet" href="./styles/index.css" />
+
+    <style>
+        .legal-container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            line-height: 1.7;
+        }
+
+        .legal-container h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .legal-container h2 {
+            margin-top: 30px;
+            font-size: 22px;
+            color: #007bff;
+        }
+
+        .legal-container p,
+        .legal-container li {
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        .legal-container ul {
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-title">Caméra</div>
+        <ul>
+            <!-- rempli par JS -->
+        </ul>
+    </nav>
+    <main class="legal-container">
+        <h1>Mentions légales</h1>
+
+        <h2>Éditeur du site</h2>
+        <p>
+            <strong>Nom :</strong> Projet personnel – Gestion de caméras<br />
+            <strong>Statut :</strong> Projet pédagogique / personnel<br />
+            <strong>Email :</strong> contact@localhost<br />
+            <strong>Responsable de la publication :</strong> Développeur du projet
+        </p>
+
+        <h2>Hébergement</h2>
+        <p>
+            Hébergement local (serveur personnel – localhost)
+        </p>
+
+        <h2>Propriété intellectuelle</h2>
+        <p>
+            Tous les contenus du site (code, images, interfaces) sont protégés.
+            Toute reproduction est interdite sans autorisation.
+        </p>
+
+        <h2>Données personnelles (RGPD)</h2>
+        <p>
+            Les données traitées (flux vidéo, visages, noms associés)
+            sont utilisées uniquement pour le fonctionnement de l’application.
+        </p>
+
+        <h2>Cookies</h2>
+        <p>
+            Le site n’utilise que des cookies techniques nécessaires.
+        </p>
+    </main>
+    <footer>
+        <div>
+            <p>
+                Projet réalisé par
+                <a href="https://www.linkedin.com/in/dorian-bacquet-924394348/">Dorian B.</a>
+                et
+                <a href="https://www.linkedin.com/in/eloi-bontron/">Eloi B.</a>
+            </p>
+        </div>
+
+        <div id="divPages">
+            <a href="./mentions-legales.html">Mentions légales</a>
+            <a href="./sitemap.xml">Plan du site</a>
+        </div>
+
+        <div id="divDepotGithub">
+            <p>Dépôt GitHub :</p>
+            <a href="https://github.com/RandomElo/Camera">Lien</a>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", async () => {
+            try {
+                const req = await fetch("http://127.0.0.1:8000/api/liste-cameras");
+                if (!req.ok) return;
+
+                const data = await req.json();
+
+                let navHtml = `
+                    <li><a href="./">Accueil</a></li>
+                    <li><a href="./liste-visages.html">Liste des visages</a></li>
+                `;
+
+                data.ip.forEach((ip, i) => {
+                    navHtml += `<li>
+                        <a href="./camera.html?ip=${ip}">Caméra ${i + 1}</a>
+                    </li>`;
+                });
+
+                document.querySelector(".navbar ul").innerHTML = navHtml;
+
+            } catch (err) {
+                console.error("Erreur nav :", err);
+            }
+        });
+    </script>
+
+</body>
+</html>

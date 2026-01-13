@@ -1,0 +1,9 @@
+fastapi==0.121.3
+uvicorn==0.38.0
+opencv-python==4.12.0.88
+websockets==15.0.1
+insightface==0.7.3
+onnxruntime==1.23.2
+pandas==2.3.3
+requests==2.32.5
+numpy==2.2.6

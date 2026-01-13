@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    background: linear-gradient(120deg, #dfe9f3, #ffffff);
+    color: #222;
+    min-height: 100vh;
+    padding-bottom: 140px;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    background: black;
+    padding: 30px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.nav-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #007bff;
+}
+
+table {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+thead {
+    background: black;
+    color: white;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+}
+
+tbody tr {
+    border-bottom: 1px solid #eee;
+}
+
+tbody tr:hover {
+    background: #f5f7fa;
+}
+
+.tdVisage img {
+    width: 80px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+    margin-top: 80px;
+    padding: 35px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: black;
+    color: white;
+
+    a {
+    color: white;
+
+        font-weight: bold;
+    }
+    #divDepotGithub {
+        display: flex;
+        p {
+            margin-right: 5px;
+        }
+    }
+    #divPages {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        a {
+            text-align: center;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    table {
+        width: 95%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footer {
+        text-align: center;
+        gap: 15px;
+    }
+}
+
+.edit-icon {
+    cursor: pointer;
+    font-size: 20px;
+    transition: transform 0.2s, color 0.2s;
+}
+
+.edit-icon:hover {
+    transform: scale(1.2);
+    color: #007bff;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 14px;
+    width: 320px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+}
+
+.modal-content h2 {
+    margin-bottom: 15px;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.modal-actions button {
+    padding: 10px 18px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+#saveEdit {
+    background: #007bff;
+    color: white;
+}
+
+#closeEdit {
+    background: #ccc;
+}

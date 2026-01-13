@@ -1,0 +1,373 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    background: linear-gradient(120deg, #dfe9f3, #ffffff);
+    color: #222;
+    padding-bottom: 120px;
+}
+
+.glass {
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(12px);
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    padding: 20px;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(10px);
+    background: black;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding: 38px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+    color: white;
+}
+
+.nav-title {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 35px;
+    list-style: none;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #007bff;
+}
+
+.page-container {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.camera-name {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: #1f1f1f;
+}
+
+.video-card {
+    position: relative;
+    width: 720px;
+    height: 400px;
+    border-radius: 12px;  
+    overflow: hidden;
+    background: none;
+    box-shadow: none;
+    backdrop-filter: none;
+}
+
+
+.video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.movie-btn {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    background: rgba(0,0,0,0.65);
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.2s;
+}
+
+.movie-btn:hover {
+    background: rgba(0,0,0,0.85);
+}
+
+.main-btn {
+    margin-top: 18px;
+    padding: 12px 28px;
+    background: #007bff;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    transition: 0.3s;
+}
+
+.main-btn:hover {
+    background: #0062d6;
+    transform: translateY(-2px);
+}
+
+.joystick {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0;
+    background: none !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    border-radius: 0 !important;
+}
+
+
+.joystick button {
+    width: 55px;
+    height: 55px;
+    border-radius: 12px;
+    background: #333;
+    color: white;
+    border: none;
+    font-size: 19px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.joystick button:hover {
+    background: #007bff;
+}
+
+.face-stats {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.stat-card {
+    width: 260px;
+    text-align: center;
+}
+
+.stat-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.stat-number {
+    font-size: 40px;
+    font-weight: 800;
+    color: #007bff;
+}
+
+.stat-visage {
+    font-size: 25px;
+    font-weight: 800;
+    color: #007bff;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+    margin-top: 80px;
+    padding: 35px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: black;
+    color: white;
+
+    a {
+    color: white;
+
+        font-weight: bold;
+    }
+    #divDepotGithub {
+        display: flex;
+        p {
+            margin-right: 5px;
+        }
+    }
+    #divPages {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        a {
+            text-align: center;
+        }
+    }
+}
+
+.cinema-mode .video-section {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+.video-section #buttons-container {
+    text-align: center;
+}
+
+.cinema-mode #video {
+    width: 1192px !important;
+    height: 670px!important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    object-fit: contain !important;
+}
+
+.cinema-mode .video-card {
+    width: 100% !important;
+    height: 100% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cinema-mode .camera-name {
+    display: none !important;  
+}
+
+.cinema-mode .main-btn {
+    display: none !important;
+}
+
+.cinema-mode .face-stats         {
+    display: none !important; 
+}
+
+.cinema-mode .camera-controls{
+    display: none !important; 
+}
+
+.cinema-mode .movie-btn {
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
+    z-index: 9999;
+}
+
+.video-card {
+    position: relative !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    background: #000;
+}
+
+.video-loader {
+    width: 60px;
+    height: 60px;
+    border: 6px solid rgba(255,255,255,0.25);
+    border-top: 6px solid #007bff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    position: absolute;
+    z-index: 5000 !important;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.video {
+    display: none;
+}
+
+.camera-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.joystick {
+    position: absolute;
+    right: 350px;
+    top: 320px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1px;
+
+    padding: 18px;
+    border-radius: 16px;
+
+    width: 130px;
+
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.joystick .mid-row {
+    display: flex;
+    gap: 50px;
+}
+
+.joystick .arrow {
+    width: 55px;
+    height: 55px;
+
+    border-radius: 14px;
+    border: none;
+
+    font-size: 22px;
+    font-weight: bold;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(0,0,0,0.75);
+    color: white;
+
+    cursor: pointer;
+    transition: 0.2s ease-out;
+}
+
+.joystick .arrow:hover {
+    background: #007bff;
+    transform: translateY(-2px);
+}
+
+.joystick .arrow:active {
+    transform: scale(0.90);
+}
+
+@media (max-width: 900px) {
+    .joystick {
+        position: static;
+        margin-top: 20px;
+        width: auto;
+        flex-direction: row;
+    }
+
+    .joystick .mid-row {
+        flex-direction: column;
+    }
+}

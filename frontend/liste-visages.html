@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Liste des visages</title>
+    <link rel="stylesheet" href="./styles/listeVisages.css" />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-title">Caméra</div>
+        <ul>
+            <li><a href="./">Accueil</a></li>
+            <li><a href="./liste-visages.html">Liste des visages</a></li>
+        </ul>
+    </nav>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Image</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Jean</td>
+                    <td class="tdVisage">
+                        <img src="https://via.placeholder.com/80" alt="Visage" />
+                    </td>
+                    <td>
+                        <span class="edit-icon" data-nom="Jean">✏️</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <h2>Modifier le visage</h2>
+            <input
+                type="text"
+                id="editInput"
+                placeholder="Nouveau nom"
+            />
+
+            <div class="modal-actions">
+                <button id="saveEdit">Enregistrer</button>
+                <button id="closeEdit">Annuler</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div>
+            <p>
+                Projet réalisé par
+                <a href="https://www.linkedin.com/in/dorian-bacquet-924394348/">Dorian B.</a>
+                et
+                <a href="https://www.linkedin.com/in/eloi-bontron/">Eloi B.</a>
+            </p>
+        </div>
+
+        <div id="divPages">
+            <a href="./mentions-legales.html">Mentions légales</a>
+            <a href="./sitemap.xml">Plan du site</a>
+        </div>
+
+        <div id="divDepotGithub">
+            <p>Dépôt GitHub :</p>
+            <a href="https://github.com/RandomElo/Camera">Lien</a>
+        </div>
+    </footer>
+    <script src="./scripts/listeVisages.js"></script>
+
+</body>
+</html>
