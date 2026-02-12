@@ -85,7 +85,7 @@ venv\Scripts\activate     # Windows
 
 ### 4. Installation de buffalo_s
 
-Télécharger [buffalo_s](https://github.com/deepinsight/insightface/releases/) et mettre le contenu dans le dossier `/backend/models/buffalo_sface`.
+Télécharger [buffalo_s](https://github.com/deepinsight/insightface/releases/) et mettre le contenu dans le dossier `/models/buffalo_sface`.
 
 ### 5 . Installation compileur C++
 
